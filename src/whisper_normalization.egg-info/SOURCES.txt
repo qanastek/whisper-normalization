@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/whisper_normalization/__init__.py
+src/whisper_normalization/basic.py
+src/whisper_normalization/english.json
+src/whisper_normalization/english.py
+src/whisper_normalization.egg-info/PKG-INFO
+src/whisper_normalization.egg-info/SOURCES.txt
+src/whisper_normalization.egg-info/dependency_links.txt
+src/whisper_normalization.egg-info/requires.txt
+src/whisper_normalization.egg-info/top_level.txt

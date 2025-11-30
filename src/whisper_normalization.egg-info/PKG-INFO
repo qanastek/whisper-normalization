@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: whisper_normalization
+Version: 0.1.0
+Summary: Text normalization for Whisper models
+License: MIT License
+        
+        Copyright (c) 2022 OpenAI
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: regex
+Requires-Dist: more-itertools
+Dynamic: license-file
+
+# Whisper Normalization
+
+A Python package for text normalization, specifically designed for use with Whisper models.
+
+**Note:** This code is extracted from [OpenAI's Whisper repository](https://github.com/openai/whisper) to allow for standalone usage of the text normalization modules without the heavy dependencies of the full Whisper package.
+
+- Original Source: [openai/whisper](https://github.com/openai/whisper)
+- License: MIT
+
+## Installation
+
+You can install this package directly from source:
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+from whisper_normalization import EnglishTextNormalizer, BasicTextNormalizer
+
+# English Normalization
+normalizer = EnglishTextNormalizer()
+text = "Mr. Smith bought $5.50 worth of apples in the 1990s."
+normalized = normalizer(text)
+print(normalized)
+# Output: "mister smith bought five dollars and fifty cents worth of apples in the nineteen nineties"
+
+# Basic Normalization
+basic_normalizer = BasicTextNormalizer()
+text = "Bonjour à tous!"
+normalized = basic_normalizer(text)
+print(normalized)
+```
+
+## Features
+
+- Basic text cleaning (symbol removal, diacritic handling)
+- Advanced English normalization:
+  - Number to text conversion (integers, decimals, currencies, years)
+  - Contraction expansion
+  - Abbreviation expansion
+  - British to American spelling normalization
