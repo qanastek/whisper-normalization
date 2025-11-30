@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: whisper_normalization
-Version: 0.1.0
+Version: 1.0.0
 Summary: Text normalization for Whisper models
 License: MIT License
         
@@ -36,6 +36,8 @@ Dynamic: license-file
 
 # Whisper Normalization
 
+[![PyPI](https://img.shields.io/pypi/v/whisper-normalization)](https://pypi.org/project/whisper-normalization/)
+
 A Python package for text normalization, specifically designed for use with Whisper models.
 
 **Note:** This code is extracted from [OpenAI's Whisper repository](https://github.com/openai/whisper) to allow for standalone usage of the text normalization modules without the heavy dependencies of the full Whisper package.
@@ -50,7 +52,7 @@ You can install this package directly from source:
 ```bash
 pip install .
 ```
-You can also install it from PyPi:
+You can also be installed from PyPi:
 
 ```bash
 pip install whisper-normalization
