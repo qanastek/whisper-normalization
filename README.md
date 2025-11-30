@@ -1,5 +1,7 @@
 # Whisper Normalization
 
+[![PyPI](https://img.shields.io/pypi/v/whisper-normalization)](https://pypi.org/project/whisper-normalization/)
+
 A Python package for text normalization, specifically designed for use with Whisper models.
 
 **Note:** This code is extracted from [OpenAI's Whisper repository](https://github.com/openai/whisper) to allow for standalone usage of the text normalization modules without the heavy dependencies of the full Whisper package.
@@ -13,6 +15,11 @@ You can install this package directly from source:
 
 ```bash
 pip install .
+```
+You can also be installed from PyPi:
+
+```bash
+pip install whisper-normalization
 ```
 
 ## Usage

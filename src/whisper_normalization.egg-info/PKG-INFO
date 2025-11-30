@@ -50,6 +50,11 @@ You can install this package directly from source:
 ```bash
 pip install .
 ```
+You can also install it from PyPi:
+
+```bash
+pip install whisper-normalization
+```
 
 ## Usage
 
